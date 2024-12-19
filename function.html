@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Section.!</title>
+</head>
+
+<body>
+
+
+    <p id="demo"></p>
+    <h2 id="second"></h2>
+    <h3 id="third"></h3>
+    <h1 id="celsius"></h1>
+    <h2 id="fahrenheit"></h2>
+    <h4 id="text"></h4>
+    <h1 id="hello"></h1>
+    <h5 id="six"></h5>
+    <script>
+        // how to create function
+        function myFunction(p1, p2){
+            return p1 * p2;
+        }
+        let result = myFunction(50, 4);
+        document.getElementById("demo").innerHTML = "The first function result: "+ result;
+
+        // Another way create a function
+        let x = secondFunction(100, 10);
+        document.getElementById("second").innerHTML= "The second function result: "+ x;
+        function secondFunction(a, b){
+            return a / b;
+        }
+        // This is third function
+        function thirdFunction(num1, num2, num3){
+            return num1 * num2 / num3;
+        }
+        let num4 = thirdFunction(10, 20, 5);
+        document.getElementById('third').innerHTML= "The third function result :" + num4;
+
+        //Coverts from Fahrenheit to celsius 
+        function toCelsius(f){
+            return (5/9) * (f-32);
+        }
+        let value = toCelsius(77);
+        document.getElementById("celsius").innerHTML= "The convert celsius result :" +value;
+
+        // Convert Celsius to Fahrenheit 
+        function toFahrenheit(c){
+            return c*(9/5) + 32;
+        }
+        let reuslts = toFahrenheit(50);
+        document.getElementById("fahrenheit").innerHTML= "The convert Fahrenheit result :" +reuslts;
+
+        //Function
+        function fourFunction(){
+            let carName = "BMW-X5";
+            let text = "Inside: " + typeof carName + " " + carName;
+            document.getElementById("text").innerHTML = text;
+        }
+        fourFunction();
+
+        // Just retun the value
+        function fiveFunction(){
+            return "hello";
+        }
+        document.getElementById("hello").innerHTML= fiveFunction();
+
+        // Direct function call
+        function sixFunction(first, second){
+            return 10 * 10;
+        }
+        document.getElementById("six").innerHTML ="The six function result is : "+ sixFunction();
+
+    
+
+       
+    </script>
+
+
+</body>
+
+</html>
